@@ -14,9 +14,9 @@ const App = () => {
   return (
     <NavigationContainer>
       <Tab.Navigator
-        tabBarOptions={{
-          showLabel: false,
-          style: {
+        screenOptions={{
+          tabBarShowLabel: false,
+          tabBarStyle: {
             position: "absolute",
             elevation: 0,
             backgroundColor: "white",
@@ -25,8 +25,8 @@ const App = () => {
           },
         }}
       >
-        <Tab.Screen 
-          name = 'Home' 
+        <Tab.Screen
+          name = 'Home'
           component = {Home}
           options = {{
             tabBarIcon: ({ focused }) => (
@@ -45,11 +45,11 @@ const App = () => {
                 </Text>
               </View>
             )
-          }} 
+          }}
         />
         <Tab.Screen
           name = 'Portfolio'
-          component={Portfolio} 
+          component={Portfolio}
           options = {{
             tabBarIcon: ({ focused }) => (
               <View style = {{ alignItems: 'center', justifyContent: 'center' }}>
@@ -67,10 +67,10 @@ const App = () => {
                 </Text>
               </View>
             )
-          }} 
+          }}
         />
         <Tab.Screen
-          name = 'Transfer' 
+          name = 'Transfer'
           component={Transfer}
           options = {{
             tabBarIcon: ({ focused }) => (
@@ -86,10 +86,10 @@ const App = () => {
                 />
               </View>
             )
-          }}  
+          }}
         />
-        <Tab.Screen 
-          name = 'Prices' 
+        <Tab.Screen
+          name = 'Prices'
           component={Prices}
           options = {{
             tabBarIcon: ({ focused }) => (
@@ -108,10 +108,10 @@ const App = () => {
                 </Text>
               </View>
             )
-          }}  
+          }}
         />
-        <Tab.Screen 
-          name = 'Settings' 
+        <Tab.Screen
+          name = 'Settings'
           component={Settings}
           options = {{
             tabBarIcon: ({ focused }) => (
@@ -130,7 +130,7 @@ const App = () => {
                 </Text>
               </View>
             )
-          }}  
+          }}
         />
       </Tab.Navigator>
     </NavigationContainer>
